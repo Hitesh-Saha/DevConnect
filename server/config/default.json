@@ -1,0 +1,4 @@
+{
+    "mongoURL": "mongodb+srv://Hitesh:Hitesh@devapp.k21kh.mongodb.net/userDB?retryWrites=true&w=majority",
+    "jwtToken": "mysecrettoken"
+}
