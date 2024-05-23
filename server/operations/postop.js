@@ -134,7 +134,7 @@ const addComment = async (req, res) => {
     post.comments.unshift(newComment);
     await post.save();
 
-    return res.status(200).json(post.comments);
+    return res.status(200).json(post);
   } catch (err) {
     raiseError(err);
   }
@@ -163,7 +163,7 @@ const removeComment = async (req, res) => {
     post.comments.splice(removeIndex, 1);
     await post.save();
 
-    return res.status(200).json(post.comments);
+    return res.status(200).json({msg: "Comment deleted successfully"});
   } catch (err) {
     raiseError(err);
   }

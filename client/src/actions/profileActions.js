@@ -51,7 +51,7 @@ export const getProfileByHandle = handle => dispatch => {
 export const createProfile = (profileData, history) => dispatch => {
   axios
     .post('/api/profile', profileData)
-    .then(res => history.push('/dashboard'))
+    .then(res => history('/dashboard'))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -64,7 +64,7 @@ export const createProfile = (profileData, history) => dispatch => {
 export const addExperience = (expData, history) => dispatch => {
   axios
     .put('/api/profile/experience', expData)
-    .then(res => history.push('/dashboard'))
+    .then(res => history('/dashboard'))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -77,7 +77,7 @@ export const addExperience = (expData, history) => dispatch => {
 export const addEducation = (eduData, history) => dispatch => {
   axios
     .put('/api/profile/education', eduData)
-    .then(res => history.push('/dashboard'))
+    .then(res => history('/dashboard'))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
