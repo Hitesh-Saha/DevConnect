@@ -3,4 +3,6 @@ body {
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 96vw;
 }

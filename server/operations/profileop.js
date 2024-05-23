@@ -85,7 +85,7 @@ const createProfile = async (req, res) => {
 const getAllProfiles = async (req, res) => {
   try {
     const profiles = await Profile.find().populate("user", ["name", "avatar"]);
-    return res.status.json(profiles);
+    return res.status(200).json(profiles);
   } catch (error) {
     console.log(error.message);
     return res.status(500).send("Server Error");
